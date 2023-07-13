@@ -3,6 +3,8 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     box-sizing:border-box;
+    transition: 0.3s;
+
 }
 
 body{
@@ -15,20 +17,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px 0px 80px;
+    padding: 0 7%;
     position:fixed;
     width: 100%;
 }
 
-.Logo {
+.logo {
     height: 80%;
     width: auto;
-}
-
-.icon{
-    color: rgb(195, 131, 131);
-    display:none
-    
 }
 
 nav ul{
@@ -39,66 +35,99 @@ nav ul{
 nav ul li a{
     color: #080808;
     text-decoration: none;
-    margin: 0 5px;
     font-size: 18px;
     letter-spacing: 2px;
-    transition: 0.3s;
+    margin: 0 30px;
+    display:block;
+
 
 }
-
 nav ul li a:hover, nav ul li a.active{
     color: brown;
-}
-
-nav .menu-btn i{
-    color:#080808;
 }
 
 .filler {
     height: 80px;
 }
 
-@media only screen and (max-width: 600px) {
-    nav{
-        height:65px;
-        margin: auto;
-        padding-top: 5px;
-        padding-left: 17%;
-        position:static;
-    }
-
-    .Logo {
-        height: 50px;
-        width: auto;
-     }
-    
-    nav ul{
-        position: fixed;
-        top: 60px;
-        left: 0;
-        height: 100vh;
-        width: 100%;
-        display: block;
-        text-align: center;
-
-    }
-
-    nav ul li{
-        margin: 40px 0;
-        font-size: 20px;
-        display:blcok
-    }
-
-    .filler{
-        height: 0;
-    }
-
-    .icon{
-        display:inline;
-    }
-
-
-
-
+.burger div{
+    width:25px;
+    height:2px;
+    margin:5px;
+    background-color: rgb(195, 131, 131);
+    display:none;
 }
+
+.burger {
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    nav {
+        position: static;
+        height: 11vh;
+        padding: 0 12%;
+
+    }
+    .filler {
+        height:0px;
+    }
+
+    .nav-links {
+        position:absolute;
+        justify-content: space-around;
+        right:0px;
+        height:89vh;
+        top: 11vh;
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        width: 50%;
+        transform: translate(100%);
+
+    }
+    .nav-links li{
+        opacity:0;
+    }
+    .nav-links li a{
+        font-size: 15px;
+    }
+    .burger div{
+        display:block;
+    }
+
+    .nav-active {
+        transform: translate(0%);
+    }
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform:translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+.toggle .one{
+    transform: rotate(-45deg) translate(-5px,5px);
+    height: 3px;
+}
+.toggle .two{
+    opacity: 0;
+}
+.toggle .three{
+    transform: rotate(45deg) translate(-5px,-5px);
+    height: 3px;
+}
+
 

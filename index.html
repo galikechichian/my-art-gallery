@@ -13,20 +13,24 @@
 </head>
 
 <body>
-    <nav id="topnav" class="myTopnav">
-        <img class="Logo" src="myLogo.png" width="200"></img>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <ul class="list-elements">
+    <nav>
+        <img class="logo" src="myLogo.png" width="200"></img>
+        <ul class="nav-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="#bio">ABOUT</a></li>
             <li><a href="works.html">PORTFOLIO</a></li>
             <li><a href="links.html">LINKS</a></li>
             <li><a href="contact.html">CONTACT</a></li>
-        </ul>     
+        </ul>
+        <div class="burger">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>   
     </nav>
+    
     <div class="filler"></div>
+    
     <div>
         <h3 class="intro">Hi, my name is Gali Kechichian. I'm a 19-year old artist and aspiring software engineer.</h3>
         <img class="pic" src="gagoul.jpg" alt="Gali.jpg">
@@ -46,15 +50,6 @@
         </p>
     </div>
 
-    <script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-}
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
