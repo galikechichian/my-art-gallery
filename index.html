@@ -7,9 +7,9 @@
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,9 +17,8 @@
         <img class="logo" src="myLogo.png" width="200"></img>
         <ul class="nav-links">
             <li><a href="index.html">HOME</a></li>
-            <li><a href="#bio">ABOUT</a></li>
-            <li><a href="works.html">PORTFOLIO</a></li>
-            <li><a href="links.html">LINKS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="works.html">GALLERY</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
         <div class="burger">
@@ -31,25 +30,70 @@
     
     <div class="filler"></div>
     
-    <div>
-        <h3 class="intro">Hi, my name is Gali Kechichian. I'm a 19-year old artist and aspiring software engineer.</h3>
-        <img class="pic" src="galoul.jpg" alt="Gali.jpg">
+    <div class="section1">
+        <h3 class="intro">Hi, my name is Gali Kechichian. <br>I'm an artist and aspiring software engineer.</h3>
+        <img class="pic" src="galgoul.jpg" alt="Gali.jpg">
+        <p>Welcome to my digital art gallery!</p>
     </div>
+
+    <div class="feat"><p>Featuring</p></div>
     
-    <div>
-        <!-- Comment !!! :) -->
-        <h3 class="feat">FEATURING</h3>
-        <div class="drawing1">insert pic1</div>
-        <div class="drawing2">insert pic2</div>
-        <div class="drawing3">insert pic3</div>
-        <div class="drawing4">insert pic4</div>
-        <div class="seeall"><a href="ARTDEPO">See all</a></div>
-        <h3 class="bio" id="bio">ABOUT ME </h3>
+    <div class="preview-gallery">
+        <div class="resp-prev">
+            <div>
+                <img src="galgoul.jpg">
+                <div class="desc">insert pic1</div>
+            </div>
+        </div>
+
+        <div class="resp-prev">
+            <div>
+                <img src="ocean.jpg">
+                <div class="desc">insert pic2</div>
+            </div>  
+        </div>
+        
+        <div class="resp-prev">
+            </div>
+                <img src="tree.jpg">
+                <div class="desc">insert pic3</div>
+            </div>
+        </div>
+
+        <div class="resp-prev">
+            <div>
+                <img src="pups.jpg">
+                <div class="desc">insert pic4</div>
+            </div>
+        </div>
+
+        <p>View all</p>
+    </div>
+
+    <div class="about-me"><p>About me</p></div>
+    
+    <div class="bio">
         <p>
-            Gyanked badme hos
+            Thanks to the support of my lovely family, 
+            I discovered my passion for art early on in my life. 
+            <br>I was born and raised in Beirut (Lebanon), but soon after graduating high
+            school I moved to Montreal to pursue my Bachelor's in Computer Science.
+            I'm currenly a full-time student at McGill University and an artist during my free time.
         </p>
     </div>
 
+    <div class="footer">
+        <h3>Let's talk</h3>
+        <p><i id="pin" class="fa-solid fa-location-dot"></i>Montreal, QC, Canada</p>
+        <p><i id="mail"class="fa-regular fa-envelope"></i>galialik.k@gmail.com</p>
+        <ul class="socials">
+            <li><a target="_blank" href="https://www.instagram.com/galidraws"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+            <li><a target="_blank" href="https://www.tiktok.com/@gali.draws"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/galikechichian/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+        </ul>
+        <p id="copy" class="copyright"><i class="fa-regular fa-copyright"></i>2023 by Gali Kechichian. All rights reserved.</p>
+    </div>
     <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
 </body>
 </html>

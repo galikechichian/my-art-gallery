@@ -44,12 +44,10 @@ nav ul li a{
 
 }
 nav ul li a:hover, nav ul li a.active{
-    color: brown;
+    color: rgb(132, 76, 88);
     font-size:19px;
     padding:4px 0px;
-    border-bottom: 1px solid;
-    
-    
+    border-bottom: 1px solid;    
 }
 
 .filler {
@@ -69,6 +67,166 @@ nav ul li a:hover, nav ul li a.active{
     justify-content: center;
     cursor:pointer;
 }
+
+.section1 {
+    display:flex;
+    flex-direction: column;
+    margin: 80px  auto;
+    max-width: 60%;
+    align-items: center;
+}
+
+.section1 h3{
+    font-size: 30px;
+    color: rgb(132, 76, 88);
+    line-height: 50px;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    text-align:center;
+    
+}
+
+.section1 p{
+    color: rgb(132, 76, 88);
+    font-size: 20px;
+    font-family:'Philosopher', serif;
+    text-align:center;
+    line-height: 35px;
+    border-top: 1px solid rgb(132, 76, 88);
+    border-bottom: 1px solid rgb(132, 76, 88);
+}
+.pic {
+    width: 200px;
+    height: auto;
+    border-radius:50%;
+    margin: 40px 0px;
+}
+
+div .gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+.resp-prev div img {
+padding: 15px;
+text-align: center;
+}
+
+  
+.resp-preview {
+padding: 0 6px;
+float: left;
+width: 24.99999%;
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
+  
+
+
+.preview-gallery p{
+    width:fit-content;
+    color: rgb(132, 76, 88);
+    padding-bottom: 4px;
+    margin: 30px auto;
+    text-align: center;
+    border-bottom: 1px solid rgb(132, 76, 88);
+
+}
+.preview-gallery p:hover{
+    border-bottom: 1px solid black;
+    color: black;
+    font-size:17px;
+
+}
+
+
+
+.feat, .about-me {
+    display: flex;
+    margin:auto;
+    height: 80px;
+    width:100%;
+    background-color:rgb(195, 131, 145);
+}
+
+.feat p, .about-me p{
+    color: #fff;
+    font-size:25px;
+    font-weight: 100;
+    font-family:'Philosopher', serif;
+    margin: auto;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.bio {
+    margin:30px auto;
+    display:flex;
+    max-width: 800px;
+}
+
+.bio p{
+    text-align: center;
+    padding: 20px 20px;
+    line-height: 25px;
+    font-size: 18px;
+    color: rgb(132, 76, 88);
+    word-spacing: 2px;
+
+}
+
+.footer{
+    background-color: rgb(132, 76, 88);
+    padding:20px;
+    height: 300px;
+}
+
+.footer h3{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.footer h3{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.footer p{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+#pin, #mail{
+    margin-right:10px;
+}
+
+.socials{
+    margin:40px 0px;
+    display:flex;
+    list-style: none;
+}
+
+.socials li a{
+    margin-right:30px;
+}
+.socials li a i{
+    color:#fff;
+    width:25px;
+}
+#copy{
+    font-size: 15px;
+    text-align: center;
+}
+
+.copyright i{
+    margin-right:4px;
+}
+
 
 @media screen and (max-width: 768px) {
     body{
@@ -111,6 +269,15 @@ nav ul li a:hover, nav ul li a.active{
     .nav-active {
         transform: translate(0%);
     }
+
+    .section1 h3 {
+        font-size: 20px;
+    }
+
+    .feat, .about-me {
+        height: 8vh;
+    }
+
 }
 
 @keyframes navLinkFade {
@@ -135,5 +302,3 @@ nav ul li a:hover, nav ul li a.active{
     transform: rotate(45deg) translate(-5px,-5px);
     height: 3px;
 }
-
-
