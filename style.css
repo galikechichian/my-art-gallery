@@ -1,14 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Roboto', sans-serif;
     box-sizing:border-box;
-    transition: 0.3s;
+    transition: 0.2s;
 
 }
 
 body{
     background: hsl(347, 58%, 95%);
+    overflow-x: scroll;
 }
 
 nav{
@@ -36,7 +37,7 @@ nav ul li a{
     color: #080808;
     text-decoration: none;
     font-size: 18px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     margin: 0 30px;
     display:block;
 
@@ -44,6 +45,11 @@ nav ul li a{
 }
 nav ul li a:hover, nav ul li a.active{
     color: brown;
+    font-size:19px;
+    padding:4px 0px;
+    border-bottom: 1px solid;
+    
+    
 }
 
 .filler {
