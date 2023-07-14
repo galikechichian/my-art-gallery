@@ -116,21 +116,19 @@ nav ul li a.nav-active{
     display: none;
     background-color:hsl(343, 64%, 98%);
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 75px;
 }
 
-img {
+.mySlides img {
     vertical-align: middle;
-    max-height:50vh;
+    height:400px;
     width:auto;
 }
 
 /* Slideshow container */
 .slideshow-container {
     position: relative;
-    max-width:600px;
-    margin-top: 20px;
+    width:fit-content;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -140,25 +138,25 @@ img {
   cursor: pointer;
   position: absolute;
   width: auto;
-  top: 40%;
-  color: rgb(132, 76, 88);
+  top: 52%;
+  color: hsl(347, 58%, 95%);
   font-weight: bold;
   font-size: 40px;
   transition: 0.3s ease;
   border-radius: 0 3px 3px 0;
-  padding: 0 20px;
+  padding: 0 15px;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-    margin: 0 30px;
+    margin: 0 0px;
     right: 0;
     border-radius: 5% 0 0 5%;
 }
 
 .prev {
-    margin: 0 30px;
+    margin: 0 0px;
     left: 0;
     border-radius: 5% 0 0 5%;
 }
@@ -172,15 +170,11 @@ img {
 /* Caption text */
 .text {
   color: rgb(132, 76, 88);
-  font-size: 19px;
-  padding:10px;
-  position: absolute;
+  font-size: 18px;
+  padding:20px 0;
   bottom: 8px;
   width: 100%;
   text-align: center;
-  border-bottom: 2px solid;
-  border-top: 2px solid;
-
 
 }
 
@@ -217,14 +211,6 @@ img {
 
   .text{font-size: 15px;}
 }
-
-@media only screen and (max-width: 500px) {
-    img {
-        max-height:190px;
-    }
-}
-
-
 
 .view-all{
     font-size: 20px;
@@ -370,14 +356,18 @@ img {
         font-size: 20px;
     }
 
+
     .feat, .about-me {
         height: 8vh;
     }
 
     .prev, .next {
-        top:101%;
-        
-      }
+        display:none;
+    }
+
+    .mySlides img {
+        max-height:190px;
+    }
 
 }
 
@@ -402,71 +392,4 @@ img {
 .toggle .three{
     transform: rotate(45deg) translate(-5px,-5px);
     height: 3px;
-}
-
-/* Contact page */
-.form-container{
-    max-width:500px;
-    height: 500px;
-    margin: 20px auto;
-}
-
-.form-title{
-    font-family:'Philosopher', serif;
-    font-size: 30px;
-    text-transform: uppercase;
-    margin-bottom:5px;
-    color:rgb(132, 76, 88);
-}
-form{
-    display:flex;
-    flex-direction: column;
-    width: 80%
-}
-form input, form textarea{
-    border:0;
-    margin: 13px 0;
-    padding:20px 10px;
-    outline:none;
-    font-size:16px;
-    color:dimgrey;
-    border-radius: 7px;
-}
-
-
-form button{
-    margin: 13px 0;
-    padding: 20px 10px;
-    background:rgb(195, 131, 145);
-    color: #fff;
-    border:none;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    border-radius: 7px;
-}
-form button:hover{
-    background:rgb(132, 76, 88);
-    cursor:pointer;
-}
-
-@media screen and (max-width: 760px) {
-    .form-container{
-        max-width: 90%;
-        height: auto;
-    }
-    .form-title{
-        font-size: 20px;
-    }
-    form input, form textarea{
-        margin: 8px 0;
-        padding: 8px 5px;
-        font-size: 15px;
-    }
-    form button{
-        margin:8px 0;
-        padding:12px;
-
-    }
-
 }

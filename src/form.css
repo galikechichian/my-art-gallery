@@ -1,0 +1,67 @@
+/* Contact page */
+.form-container{
+    max-width:500px;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.form-title{
+    font-family:'Philosopher', serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom:5px;
+    color:rgb(132, 76, 88);
+}
+form{
+    display:flex;
+    flex-direction: column;
+    width: 80%
+}
+form input, form textarea{
+    border:0;
+    margin: 13px 0;
+    padding:20px 10px;
+    outline:none;
+    font-size:16px;
+    color:dimgrey;
+    border-radius: 7px;
+}
+
+form button{
+    margin: 13px 0;
+    padding: 20px 10px;
+    background:rgb(195, 131, 145);
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 7px;
+}
+form button:hover{
+    background:rgb(132, 76, 88);
+    cursor:pointer;
+}
+
+@media screen and (max-width: 760px) {
+    .form-container{
+        max-width: 90%;
+        height: auto;
+    }
+    .form-title{
+        font-size: 20px;
+    }
+    form input, form textarea{
+        margin: 8px 0;
+        padding: 8px 5px;
+        font-size: 15px;
+    }
+    form button{
+        margin:8px 0;
+        padding:12px;
+
+    }
+    .mySlides img {
+        max-height:190px;
+    }
+}

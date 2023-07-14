@@ -41,23 +41,23 @@
     <div class="slideshow-container">
 
         <div class="mySlides">
-          <img src="../images/art.jpg" >
-          <div class="text">Caption Text</div>
+            <div class="text">Caption Text</div>
+            <img src="../images/art.jpg" >
         </div>
         
         <div class="mySlides">
+            <div class="text">Caption Two</div>
           <img src="../images/pups.jpg">
-          <div class="text">Caption Two</div>
         </div>
         
         <div class="mySlides">
+            <div class="text">Caption Three</div>
           <img src="../images/ocean.jpg">
-          <div class="text">Caption Three</div>
         </div>
         
         <div class="mySlides">
-            <img src="../images/tree.jpg">
             <div class="text">Caption Four</div>
+            <img src="../images/tree.jpg">
           </div>
         
         <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -100,37 +100,7 @@
         <p id="copy" class="copyright"><i class="fa-regular fa-copyright"></i>2023 by Gali Kechichian. All rights reserved.</p>
     </div>
     <script src="navLinks.js"></script>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            
-            if (n > slides.length) {slideIndex = 1}    
-            
-            if (n < 1) {slideIndex = slides.length}
-            
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("dot-active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " dot-active";
-        }
-        </script>
-        <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
+    <script src="slider.js"></script>
+    <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
 </body>
 </html>
