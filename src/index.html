@@ -14,12 +14,12 @@
 
 <body>
     <nav>
-        <img class="logo" src="myLogo.png" width="200"></img>
+        <img class="logo" src="../images/myLogo.png" width="200"></img>
         <ul class="nav-links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="works.html">GALLERY</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="">HOME</a></li>
+            <li><a class="nav__link" href="">ABOUT</a></li>
+            <li><a class="nav__link" href="/src/gallery.html">GALLERY</a></li>
+            <li><a class="nav__link" href="/src/contact.html">CONTACT</a></li>
         </ul>
         <div class="burger">
             <div class="one"></div>
@@ -28,11 +28,11 @@
         </div>   
     </nav>
     
-    <div class="filler"></div>
+    <div id="home" class="filler"></div>
     
     <div class="section1">
         <h3 class="intro">Hi, my name is Gali Kechichian. <br>I'm an artist and aspiring software engineer.</h3>
-        <img class="pic" src="galgoul.jpg" alt="Gali.jpg">
+        <img class="pic" src="../images/galgoul.jpg" alt="Gali.jpg">
         <p>Welcome to my digital art gallery!</p>
     </div>
 
@@ -41,22 +41,22 @@
     <div class="slideshow-container">
 
         <div class="mySlides">
-          <img src="galgoul.jpg" >
+          <img src="../images/galgoul.jpg" >
           <div class="text">Caption Text</div>
         </div>
         
         <div class="mySlides">
-          <img src="pups.jpg">
+          <img src="../images/pups.jpg">
           <div class="text">Caption Two</div>
         </div>
         
         <div class="mySlides">
-          <img src="ocean.jpg">
+          <img src="../images/ocean.jpg">
           <div class="text">Caption Three</div>
         </div>
         
         <div class="mySlides">
-            <img src="tree.jpg">
+            <img src="../images/tree.jpg">
             <div class="text">Caption Four</div>
           </div>
         
@@ -77,7 +77,7 @@
     <div class="view-all">View all</div>
 
 
-    <div class="about-me"><p>About me</p></div>
+    <div id="abt-me" class="about-me"><p>About me</p></div>
     
     <div class="bio">
         <p>
@@ -91,16 +91,46 @@
 
     <div class="footer">
         <h3>Let's talk</h3>
-        <p><i id="pin" class="fa-solid fa-location-dot"></i>Montreal, QC, Canada</p>
-        <p><i id="mail"class="fa-regular fa-envelope"></i>galialik.k@gmail.com</p>
         <ul class="socials">
             <li><a target="_blank" href="https://www.instagram.com/galidraws"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
             <li><a target="_blank" href="https://www.tiktok.com/@gali.draws"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
             <li><a target="_blank" href="https://www.linkedin.com/in/galikechichian/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
         </ul>
+        <p><i id="pin" class="fa-solid fa-location-dot"></i>Montreal, QC, Canada</p>
         <p id="copy" class="copyright"><i class="fa-regular fa-copyright"></i>2023 by Gali Kechichian. All rights reserved.</p>
     </div>
-    <script src="app.js"></script>
-    <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
+    <script src="navLinks.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}    
+            
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("dot-active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " dot-active";
+        }
+        </script>
+        <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
 </body>
 </html>

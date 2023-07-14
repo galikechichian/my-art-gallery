@@ -7,9 +7,14 @@
 
 }
 
+
 body{
     background: hsl(347, 58%, 95%);
     overflow-x: scroll;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 nav{
@@ -44,11 +49,13 @@ nav ul li a{
 
 
 }
-nav ul li a:hover, nav ul li a.active{
-    color: rgb(132, 76, 88);
-    font-size:19px;
-    padding:4px 0px;
-    border-bottom: 1px solid;    
+
+nav ul li a:hover, 
+nav ul li a.nav-active{
+    color: rgb(195, 131, 131);
+    font-weight: bolder;
+        
+
 }
 
 .filler {
@@ -72,13 +79,15 @@ nav ul li a:hover, nav ul li a.active{
 .section1 {
     display:flex;
     flex-direction: column;
-    margin: 80px  auto;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: auto; margin-right:auto;
     max-width: 60%;
     align-items: center;
 }
 
 .section1 h3{
-    font-size: 30px;
+    font-size: 28px;
     color: rgb(132, 76, 88);
     line-height: 50px;
     letter-spacing: 3px;
@@ -187,7 +196,7 @@ img {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot-active, .dot:hover {
   background-color: rgb(195, 131, 131);
 }
 
@@ -271,38 +280,35 @@ img {
 
 .footer{
     background-color: rgb(132, 76, 88);
-    padding:20px;
-    height: 300px;
+    padding:30px;
+    height: 260px;
 }
 
 .footer h3{
     font-size: 30px;
     text-transform: uppercase;
+    color:#fff;
+    margin-bottom:40px;
 }
 
-.footer h3{
-    color:#fff;
-    margin-bottom:30px;
-}
 
 .footer p{
     font-size:18px;
-    margin-bottom:10px;
+    margin: 30px auto auto auto;
     color:#fff;
 }
 
-#pin, #mail{
-    margin-right:10px;
+#pin{
+    margin-right: 5px;
 }
-
 .socials{
-    margin:40px 0px;
+    margin:10px 0 0px;
     display:flex;
     list-style: none;
 }
 
 .socials li a{
-    margin-right:30px;
+    margin-right:35px;
 }
 .socials li a i{
     color:#fff;
@@ -396,4 +402,71 @@ img {
 .toggle .three{
     transform: rotate(45deg) translate(-5px,-5px);
     height: 3px;
+}
+
+/* Contact page */
+.form-container{
+    max-width:500px;
+    height: 500px;
+    margin: 20px auto;
+}
+
+.form-title{
+    font-family:'Philosopher', serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom:5px;
+    color:rgb(132, 76, 88);
+}
+form{
+    display:flex;
+    flex-direction: column;
+    width: 80%
+}
+form input, form textarea{
+    border:0;
+    margin: 13px 0;
+    padding:20px 10px;
+    outline:none;
+    font-size:16px;
+    color:dimgrey;
+    border-radius: 7px;
+}
+
+
+form button{
+    margin: 13px 0;
+    padding: 20px 10px;
+    background:rgb(195, 131, 145);
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 7px;
+}
+form button:hover{
+    background:rgb(132, 76, 88);
+    cursor:pointer;
+}
+
+@media screen and (max-width: 760px) {
+    .form-container{
+        max-width: 90%;
+        height: auto;
+    }
+    .form-title{
+        font-size: 20px;
+    }
+    form input, form textarea{
+        margin: 8px 0;
+        padding: 8px 5px;
+        font-size: 15px;
+    }
+    form button{
+        margin:8px 0;
+        padding:12px;
+
+    }
+
 }
