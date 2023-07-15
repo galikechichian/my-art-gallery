@@ -1,5 +1,5 @@
-/* Author: Gali Kechichian 
-*/
+// The code below is to animate the 
+// featuring page
 
 let slideIndex = 1;
 showSlides(slideIndex);
