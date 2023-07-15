@@ -1,3 +1,6 @@
+/* Author: Gali Kechichian 
+*/
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
