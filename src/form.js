@@ -33,30 +33,43 @@ function validateMessage() {
     else msgInput.classList.remove('invalid');
 }
 
-
+let untouchedEmail = true;
+let untouchedMessage = true;
 form.addEventListener('submit', (event)=> {
     event.preventDefault();
 
     validateName();
-    validateEmail();
-    validateMessage();
+    if (!untouchedEmail) {
+        validateEmail();
+        untouchedEmail=false;
+    }
+    if (!untouchedMessage) {
+        validateMessage();
+        untouchedMessage=false;
+    }
 
     // call functions on key up:
     nameInput.addEventListener('keyup', (event)=> {
+        event.preventDefault();
+
         validateName();
         if (event.key === "Enter")
         emailInput.focus();
     });
     emailInput.addEventListener('keyup', (event)=> {
+        event.preventDefault();
+
         validateEmail();
         if (event.key === "Enter") msgInput.focus();
+        
     });
     msgInput.addEventListener('keyup', validateMessage);
 
     // if all of the inputs are valid, submit
     if (!nameInput.classList.contains('invalid')
     && !emailInput.classList.contains('invalid')
-    && !msgInput.classList.contains('invalid')) {
+    && !msgInput.classList.contains('invalid')
+    && !untouchedEmail && !untouchedMessage) {
         form.submit();
     }
 
