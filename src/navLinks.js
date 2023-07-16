@@ -3,10 +3,11 @@
 
 /**Checks if we're on homepage*/
 function atHome() {
+    // Looks for an element only present in index.html
     return document.getElementById('featuring');
 }
 
-/** For narrower screens:
+/**For narrower screens:
  * lets the navbar slide on click
  * */
 function navSlide() {
@@ -31,7 +32,7 @@ function navSlide() {
     });  
 }
 
-/** Updates classlist of 'about' nav link
+/**Updates classlist of 'about' nav link
  * depending on 'about me's position relative to the viewport
  */
 function onActive() {
@@ -49,14 +50,12 @@ function onActive() {
     }
 }
 
-/** updates classlist of 'about' nav link
+/**Updates classlist of 'about' nav link
  * as the user scrolls
  */
-function activeAbout() {
-    window.addEventListener('scroll', onActive);
-}
+function activeAbout() {window.addEventListener('scroll', onActive)}
 
-/** updates classlist of 'gallery'  and 'contact' nav links
+/**Updates classlist of 'gallery'  and 'contact' nav links
  * as the user scrolls
  */
 function activeGalleryContact() {
@@ -82,18 +81,43 @@ function goHome() {
             });
         }
         // else, go to link
-        else {
-            window.location.href = '/src/index.html';
-        }
+        else window.location.href = '/src/index.html';
     });
 }
 
-activeGalleryContact();
-activeAbout();
+/**Goes to 'about me' on click*/
+function goAbout() {
+    /* Issue to fix: when going from a different page
+    click is only changing the document to home and a new script is running
+    that's why it can't scroll down once it reaches home. 
+    No exceptions thrown, but got a logical error to fix 
+    */
+    if (!document.getElementById('featuring')) {
+        document.getElementById('about-link').href='/src/index.html';
+    }
+    else {
+        const aboutLink = document.getElementById('about-link')
+        aboutLink.addEventListener('click', () => {
+        
+            // scroll to its location
+            const section = document.getElementById('abt-me');
+            const scrollLocation = section.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: scrollLocation,
+                behavior: 'auto'
+            });
+        });
+    }
+}
+
 
 goHome();
+goAbout();
 
 navSlide();
+
+activeGalleryContact();
+activeAbout();
 
 
 

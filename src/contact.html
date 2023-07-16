@@ -33,10 +33,10 @@
 
     <div class="form-container">
         <div class="form-title">Contact via email</div>
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="email" id="email" placeholder="Your email" required>
-            <textarea id="message" rows=5 placeholder="Enter your message" required></textarea>
+        <form id="myForm">
+            <input id="name" placeholder="Your name" >
+            <input id="email" placeholder="Your email" >
+            <textarea id="message" rows=5 placeholder="Enter your message" ></textarea>
             <button type="submit">Send</button>
        </form>
     </div>
@@ -52,6 +52,7 @@
         <p id="copy" class="copyright"><i class="fa-regular fa-copyright"></i>2023 by Gali Kechichian. All rights reserved.</p>
     </div>
     <script src="navLinks.js"></script>
+    <script src="form.js"></script>
     <script src="https://kit.fontawesome.com/c9be313216.js" crossorigin="anonymous"></script>
 </body>
 </html>
