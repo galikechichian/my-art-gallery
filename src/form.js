@@ -1,32 +1,30 @@
 /*Author: Gali Kechichian*/
 
-const form = document.getElementById("myForm");
-const nameE = document.getElementById("name");
-const emailE = document.getElementById("email");
-const messageE = document.getElementById("message");
-const fields = [nameE, emailE, messageE];
-
-function validateField(field) {
-    if (field.value === "") {
-        field.classList.add('invalid');
-    }else field.classList.remove('invalid');
+function validateName(nameInput){
+    return (nameInput !== "");
 }
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    
-    fields.forEach(validateField);
+function validateEmail(emailInput) {
+    let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    return (emailInput.test(pattern) || emailInput !== "");
+}
 
-    if (!nameE.classList.contains('invalid') 
-    && !emailE.classList.contains('invalid')
-    && !messageE.classList.contains('invalid')) {
-        form.submit();
-    }
-});
-
-
-nameE.addEventListener('input', validateField);
-emailE.addEventListener('input', validateField);
-messageE.addEventListener('input', validateField);
-
+function changeDisplays() {
+    // listen to the form submission event
+    let form = document.getElementById('myForm');
+    form.addEventListener('submit', (event)=>{
+        event.preventDefault();
+        let nameInput = document.getElementById('name');
+        let emailInput = document.getElementById('email');
+        if (!validateName(nameInput.value)) {
+            nameInput.classList.add('invalid');
+            document.getElementById('name-error').classList.add('invalid');
+        }
+        if (!validateName(emailInput.value)) {
+            emailInput.classList.add('invalid');
+            document.getElementById('email-error').classList.add('invalid');
+        }
+    });
+}
+changeDisplays();
 

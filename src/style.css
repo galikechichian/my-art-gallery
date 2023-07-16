@@ -184,7 +184,7 @@ nav ul li a.nav-active{
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 15px 5px;
+  margin: 17px 5px;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
@@ -231,7 +231,6 @@ nav ul li a.nav-active{
     color: black;
     font-size:22px;
     cursor: pointer;
-
 }
 
 .feat, .about-me {

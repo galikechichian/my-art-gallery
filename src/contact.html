@@ -34,8 +34,10 @@
     <div class="form-container">
         <div class="form-title">Contact via email</div>
         <form id="myForm">
+            <p id="name-error"><i class="fa-solid fa-circle-exclamation fa-sm"></i> Name required</p>
             <input id="name" placeholder="Your name" >
-            <input id="email" placeholder="Your email" >
+            <p id="email-error"><i class="fa-solid fa-circle-exclamation fa-sm"></i> Please provide a valid email</p>
+            <input id="email" placeholder="Your email">
             <textarea id="message" rows=5 placeholder="Enter your message" ></textarea>
             <button type="submit">Send</button>
        </form>
