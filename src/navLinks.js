@@ -50,11 +50,6 @@ function onActive() {
     }
 }
 
-/**Updates classlist of 'about' nav link
- * as the user scrolls
- */
-function activeAbout() {window.addEventListener('scroll', onActive)}
-
 /**Updates classlist of 'gallery'  and 'contact' nav links
  * as the user scrolls
  */
@@ -117,7 +112,22 @@ goAbout();
 navSlide();
 
 activeGalleryContact();
-activeAbout();
+
+var navbar = document.getElementById('navbar');
+var prevScrollPos = window.scrollY;
+window.addEventListener('scroll', ()=> {
+    onActive();
+    var currentScrollPos = window.scrollY;
+    if (prevScrollPos > currentScrollPos) {
+        // Scrolling up, show the navbar
+        navbar.classList.remove('hidden');
+    } else {
+        // Scrolling down, hide the navbar
+        navbar.classList.add('hidden');
+    }
+    prevScrollPos = currentScrollPos;
+});
+
 
 
 

@@ -27,6 +27,7 @@ nav{
     padding: 0 7%;
     position:fixed;
     width: 100%;
+    transition: top 0.3s ease-in-out;
 }
 
 .logo {
@@ -120,7 +121,7 @@ nav ul li a.nav-active{
     white, white, white,
     hsl(347, 58%, 95%));
     text-align: center;
-    padding-bottom:40px;
+    padding-bottom:30px;
 }
 
 .mySlides img {
@@ -129,9 +130,9 @@ nav ul li a.nav-active{
     width:auto;
 }
 
-.slideshow-container {
+#slideshow-container {
     position: relative;
-    width:90%;
+    width:80%;
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
@@ -155,7 +156,7 @@ nav ul li a.nav-active{
   top: 52%;
   color: rgb(195, 131, 145);
   font-weight: bold;
-  font-size: 40px;
+  font-size: 50px;
   transition: 0.3s ease;
   border-radius: 0 3px 3px 0;
   padding: 0 15px;
@@ -164,12 +165,12 @@ nav ul li a.nav-active{
 
 /* Position the "next button" to the right */
 .next {
-    right: 0;
+    right: 20px;
     border-radius: 5% 0 0 5%;
 }
 
 .prev {
-    left: 0;
+    left: 20px;
     border-radius: 5% 0 0 5%;
 }
 
@@ -319,17 +320,18 @@ nav ul li a.nav-active{
     body{
         overflow-x: hidden;
     }
-    
     nav {
-        position: static;
+        top: 0;
         height: 11vh;
         padding: 0 12%;
 
     }
-    .filler {
-        height:0px;
+    nav.hidden {
+        top: -100px;
     }
-
+    .filler{
+        height: 11vh;
+    }
     .nav-links {
         position:absolute;
         justify-content: space-around;
@@ -352,28 +354,28 @@ nav ul li a.nav-active{
     .burger div{
         display:block;
     }
-
     .nav-active {
         transform: translate(0%);
     }
-
     .section1 h3 {
         font-size: 20px;
     }
-
-
     .feat, .about-me {
         height: 8vh;
     }
-
     .prev, .next {
         display:none;
     }
-
     .mySlides img {
         max-height:190px;
     }
-
+    .mySlides{
+        background: none;
+        background-color: hsl(351, 47%, 97%);
+    }
+    #slideshow-container {
+        width: 100%;
+    }
 }
 
 @keyframes navLinkFade {
