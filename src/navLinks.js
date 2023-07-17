@@ -7,30 +7,44 @@ function atHome() {
     return document.getElementById('featuring');
 }
 
-/**For narrower screens:
- * lets the navbar slide on click
- * */
+
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+
+/**[mobile navbar] Animates burger icon and navbar*/
 function navSlide() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-
-    burger.addEventListener('click', ()=> {
-        nav.classList.toggle('nav-active');
-
-        navLinks.forEach(
-            (link, index)=> {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                }
-                else    
-                link.style.animation = `navLinkFade 0.2s ease forwards ${index/7+ 0.5}s`;
-            }
-        );
-        // burger animation
-        burger.classList.toggle('toggle');
-    });  
+    nav.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+    navLinks.forEach((link, index)=> {
+        if (link.style.animation) {
+            link.style.animation = '';
+        }
+        else    
+        link.style.animation = `navLinkFade 0.2s ease forwards ${index/7+ 0.5}s`;
+    });
 }
+
+
+/**Applies navSlide when burger icon is clicked
+ * 
+ * Uses event listener
+ */
+function clickBurger() {burger.addEventListener('click', navSlide)}
+
+
+/**Applies navSlide when navigating to home or about
+ * 
+ * Uses event listener
+ */
+function navSlideBack() {
+    const home = document.getElementById('home-link');
+    home.addEventListener('click', navSlide);
+    const aboutMe = document.getElementById('about-link');
+    aboutMe.addEventListener('click', navSlide);
+}
+
 
 /**Updates classlist of 'about' nav link
  * depending on 'about me's position relative to the viewport
@@ -41,14 +55,12 @@ function onActive() {
         const navbarElement = document.getElementById('about-link');
         const aboutSection = document.getElementById('abt-me');
         const viewportPosition = aboutSection.getBoundingClientRect().top;
-        if (viewportPosition <= 180) {
-            // change navbar 'active' tag:
-            // console.log('tag added');
-            navbarElement.classList.add('nav-active');
-        }
+        
+        if (viewportPosition <= 180) navbarElement.classList.add('nav-active');
         else navbarElement.classList.remove('nav-active');
     }
 }
+
 
 /**Updates classlist of 'gallery'  and 'contact' nav links
  * as the user scrolls
@@ -63,6 +75,7 @@ function activeGalleryContact() {
         }
     });    
 }
+
 
 /**Goes to homepage on click 
  * 
@@ -83,6 +96,8 @@ function goHome() {
     });
 }
 
+
+/**Scrolls to where about section is visible */
 function scrollToAbout() {
     // scroll to about section in homepage
     const section = document.getElementById('abt-me');
@@ -93,7 +108,6 @@ function scrollToAbout() {
  * 
  * Uses event listener
 */
-
 function goAbout() {
     const aboutLink = document.getElementById('about-link');
   
@@ -108,9 +122,8 @@ function goAbout() {
 
 goHome();
 goAbout();
-
-navSlide();
-
+clickBurger();
+navSlideBack();
 activeGalleryContact();
 
 var navbar = document.getElementById('navbar');
@@ -127,12 +140,3 @@ window.addEventListener('scroll', ()=> {
     }
     prevScrollPos = currentScrollPos;
 });
-
-
-
-
-
-
-
-
-

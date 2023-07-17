@@ -47,8 +47,6 @@ nav ul li a{
     letter-spacing: 4px;
     margin: 0 30px;
     display:block;
-
-
 }
 
 nav ul li a:hover, 
@@ -56,8 +54,6 @@ nav ul li a.nav-active{
     color: rgb(195, 131, 131);
     font-weight: bolder;
     cursor: pointer;
-        
-
 }
 
 .filler {
