@@ -1,11 +1,14 @@
-/*Author: Gali Kechichian*/
-
+/*Author: Gali Kechichian
+*/
 
 const form = document.getElementById('myForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const msgInput = document.getElementById('message');
 
+/**Self-explanatory: updates fields' classes according
+ * to the client's inputs
+ */
 function validateName(){
     if (nameInput.value === "") {
         nameInput.classList.add('invalid');
@@ -34,11 +37,9 @@ function validateMessage() {
     else msgInput.classList.remove('invalid');
 }
 
-let untouchedEmail=true;
-let untouchedMsg=true;
-form.addEventListener('submit', (event)=> {
-    event.preventDefault();
-    
+/**Validates the entire form
+ */
+function validateForm() {
     // call functions on key up:
     nameInput.addEventListener('keyup', (event)=> {
         event.preventDefault();
@@ -61,13 +62,23 @@ form.addEventListener('submit', (event)=> {
     validateName();
     if (!untouchedEmail) validateEmail();
     if (!untouchedMsg) validateMessage();
+}
 
-    // if all of the inputs are valid, submit
+
+let untouchedEmail=true;
+let untouchedMsg=true;
+form.addEventListener('submit', (event)=> {
+    event.preventDefault();
+    
+    validateForm();
+
+    // if all of the inputs are valid, submit the form
+    // along with performing other actions
     if (!nameInput.classList.contains('invalid')
     && !emailInput.classList.contains('invalid')
     && !msgInput.classList.contains('invalid')
-    && (!untouchedEmail && !untouchedMsg)) {
-        
+    && (!untouchedEmail && !untouchedMsg)) 
+    {
         const serviceID = "service_sr902nk";
         const templateID = "template_3pzmokd";
         var params = {
@@ -76,12 +87,12 @@ form.addEventListener('submit', (event)=> {
             message:msgInput.value
         };
 
-        emailjs.send(serviceID, templateID, params).then(()=> {
+        emailjs.send(serviceID, templateID, params, "yRlQeVe4eCTSRcnWl").then(()=> {
             form.reset();
             document.getElementById('thankyou-msg').classList.add('submitted');
             document.getElementById('button').classList.add('submitted');
         });
+
     }
 
-})
-
+});

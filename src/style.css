@@ -114,9 +114,13 @@ nav ul li a.nav-active{
 }
 
 .mySlides {
-    display: none;
-    background-color:hsl(343, 64%, 98%);
+    background: linear-gradient(to right, hsl(347, 58%, 95%),
+    white, white, white, 
+    white, white, white,
+    white, white, white,
+    hsl(347, 58%, 95%));
     text-align: center;
+    padding-bottom:40px;
 }
 
 .mySlides img {
@@ -125,13 +129,22 @@ nav ul li a.nav-active{
     width:auto;
 }
 
-/* Slideshow container */
 .slideshow-container {
     position: relative;
-    width:fit-content;
-    margin-top: 40px;
+    width:90%;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Caption text */
+.text {
+    color: rgb(132, 76, 88);
+    font-size: 18px;
+    padding:20px 0;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
 /* Next & previous buttons */
@@ -140,7 +153,7 @@ nav ul li a.nav-active{
   position: absolute;
   width: auto;
   top: 52%;
-  color: hsl(347, 58%, 95%);
+  color: rgb(195, 131, 145);
   font-weight: bold;
   font-size: 40px;
   transition: 0.3s ease;
@@ -151,13 +164,11 @@ nav ul li a.nav-active{
 
 /* Position the "next button" to the right */
 .next {
-    margin: 0 0px;
     right: 0;
     border-radius: 5% 0 0 5%;
 }
 
 .prev {
-    margin: 0 0px;
     left: 0;
     border-radius: 5% 0 0 5%;
 }
@@ -168,16 +179,6 @@ nav ul li a.nav-active{
     color: hsl(347, 58%, 95%)
 }
 
-/* Caption text */
-.text {
-  color: rgb(132, 76, 88);
-  font-size: 18px;
-  padding:20px 0;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-
-}
 
 /* The dots/bullets/indicators */
 .dot {
