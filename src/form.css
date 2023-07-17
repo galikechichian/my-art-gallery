@@ -51,7 +51,7 @@ form textarea.invalid {
 
 form input.invalid::placeholder,
 form textarea.invalid::placeholder {
-    color:rgb(219, 7, 7);
+    color:rgb(230, 126, 126);
 }
 
 form p{
