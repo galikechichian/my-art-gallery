@@ -69,7 +69,10 @@ function activeGalleryContact() {
     });    
 }
 
-/**Goes to homepage on click */
+/**Goes to homepage on click 
+ * 
+ * Uses event listener
+*/
 function goHome() {
     const homeLink = document.getElementById('home-link');
     homeLink.addEventListener('click', ()=> {
@@ -85,29 +88,26 @@ function goHome() {
     });
 }
 
-/**Goes to 'about me' on click*/
+function scrollToAbout() {
+    // scroll to about section in homepage
+    const section = document.getElementById('abt-me');
+    section.scrollIntoView({behavior: 'smooth'});
+}
+
+/**Goes to 'about me' on click
+ * 
+ * Uses event listener
+*/
+
 function goAbout() {
-    /* Issue to fix: when going from a different page
-    click is only changing the document to home and a new script is running
-    that's why it can't scroll down once it reaches home. 
-    No exceptions thrown, but got a logical error to fix 
-    */
-    if (!document.getElementById('featuring')) {
-        document.getElementById('about-link').href='/src/index.html';
-    }
-    else {
-        const aboutLink = document.getElementById('about-link')
-        aboutLink.addEventListener('click', () => {
-        
-            // scroll to its location
-            const section = document.getElementById('abt-me');
-            const scrollLocation = section.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({
-                top: scrollLocation,
-                behavior: 'auto'
-            });
-        });
-    }
+    const aboutLink = document.getElementById('about-link');
+  
+    aboutLink.addEventListener('click', () => {
+        if (!document.getElementById('featuring')) {
+            location.href = '/src/index.html#abt-me'; // Navigate to the homepage after scrolling
+        }
+        else scrollToAbout();
+    });
 }
 
 
@@ -118,6 +118,10 @@ navSlide();
 
 activeGalleryContact();
 activeAbout();
+
+
+
+
 
 
 
