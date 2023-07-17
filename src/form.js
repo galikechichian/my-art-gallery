@@ -77,6 +77,7 @@ form.addEventListener('submit', (event)=> {
         };
 
         emailjs.send(serviceID, templateID, params).then(()=> {
+            form.reset();
             document.getElementById('thankyou-msg').classList.add('submitted');
             document.getElementById('button').classList.add('submitted');
         });
