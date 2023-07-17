@@ -27,8 +27,7 @@ form input, form textarea{
     border-radius: 7px;
 }
 
-
-form button{
+#button{
     margin: 13px 0;
     padding: 20px 10px;
     background:rgb(195, 131, 145);
@@ -39,9 +38,14 @@ form button{
     letter-spacing: 3px;
     border-radius: 7px;
 }
-form button:hover{
+
+#button:hover{
     background:rgb(132, 76, 88);
     cursor:pointer;
+}
+
+#button.submitted{
+    display:none;
 }
 
 form input.invalid, 
@@ -64,6 +68,14 @@ form p.invalid{
     color:rgb(219, 7, 7);
 }
 
+#thankyou-msg{
+    color: rgb(132, 76, 88);
+    display:none;
+}
+
+#thankyou-msg.submitted{
+    display:block;
+}
 
 @media screen and (max-width: 760px) {
     .form-container{
@@ -91,4 +103,6 @@ form p.invalid{
         margin: -5px 0;
         font-size: 10px;
     }
+    
+
 }

@@ -11,6 +11,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("yRlQeVe4eCTSRcnWl");
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -35,11 +44,12 @@
         <div class="form-title">Contact via email</div>
         <form id="myForm">
             <p id="name-error"><i class="fa-solid fa-circle-exclamation fa-sm"></i> Name required</p>
-            <input id="name" placeholder="Your name" >
+            <input id="name" type="text" placeholder="Your name" >
             <p id="email-error"><i class="fa-solid fa-circle-exclamation fa-sm"></i> Please provide a valid email</p>
-            <input id="email" placeholder="Your email">
+            <input id="email" type="email" placeholder="Your email">
             <textarea id="message" rows=5 placeholder="Enter your message" ></textarea>
-            <button type="submit">Send</button>
+            <div id="thankyou-msg">Thank you! Your message has been received.</div>
+            <button id='button' type="submit">Send</button>
        </form>
     </div>
 

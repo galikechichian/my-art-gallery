@@ -1,5 +1,6 @@
 /*Author: Gali Kechichian*/
 
+
 const form = document.getElementById('myForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -61,14 +62,24 @@ form.addEventListener('submit', (event)=> {
     if (!untouchedEmail) validateEmail();
     if (!untouchedMsg) validateMessage();
 
-
-
     // if all of the inputs are valid, submit
     if (!nameInput.classList.contains('invalid')
     && !emailInput.classList.contains('invalid')
     && !msgInput.classList.contains('invalid')
     && (!untouchedEmail && !untouchedMsg)) {
-        form.submit();
+        
+        const serviceID = "service_sr902nk";
+        const templateID = "template_3pzmokd";
+        var params = {
+            name: nameInput.value,
+            email: emailInput.value,
+            message:msgInput.value
+        };
+
+        emailjs.send(serviceID, templateID, params).then(()=> {
+            document.getElementById('thankyou-msg').classList.add('submitted');
+            document.getElementById('button').classList.add('submitted');
+        });
     }
 
 })
