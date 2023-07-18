@@ -1,26 +1,23 @@
+/*Author: Gali Kechichian*/
+
 * {
     margin: 0;
     padding: 0;
     font-family:'Roboto', sans-serif;
     box-sizing:border-box;
     transition: 0.2s;
-
 }
-
-
 body{
     background: hsl(347, 58%, 95%);
     overflow-x: scroll;
 }
-
 html{
     scroll-behavior: smooth;
 }
-
 nav{
     z-index: 99;
     height: 80px;
-    background: white;
+    background:white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,12 +26,10 @@ nav{
     width: 100%;
     transition: top 0.3s ease-in-out;
 }
-
 .logo {
     height: 80%;
     width: auto;
 }
-
 nav ul{
     display: flex;
     list-style: none;
@@ -48,18 +43,15 @@ nav ul li a{
     margin: 0 30px;
     display:block;
 }
-
 nav ul li a:hover, 
 nav ul li a.nav-active{
     color: rgb(195, 131, 131);
     font-weight: bolder;
     cursor: pointer;
 }
-
 .filler {
     height: 80px;
 }
-
 .burger div{
     width:25px;
     height:2px;
@@ -67,13 +59,11 @@ nav ul li a.nav-active{
     background-color: rgb(195, 131, 131);
     display:none;
 }
-
 .burger {
     align-items: center;
     justify-content: center;
     cursor:pointer;
 }
-
 .section1 {
     display:flex;
     flex-direction: column;
@@ -83,7 +73,6 @@ nav ul li a.nav-active{
     max-width: 60%;
     align-items: center;
 }
-
 .section1 h3{
     font-size: 28px;
     color: rgb(132, 76, 88);
@@ -93,7 +82,6 @@ nav ul li a.nav-active{
     text-align:center;
     
 }
-
 .section1 p{
     color: rgb(132, 76, 88);
     font-size: 20px;
@@ -109,23 +97,21 @@ nav ul li a.nav-active{
     border-radius:50%;
     margin: 40px 0px;
 }
-
 .mySlides {
     background: linear-gradient(to right, hsl(347, 58%, 95%),
-    white, white, white, 
-    white, white, white,
-    white, white, white,
+    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
+    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
+    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
+    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
     hsl(347, 58%, 95%));
     text-align: center;
     padding-bottom:30px;
 }
-
 .mySlides img {
     vertical-align: middle;
     height:400px;
     width:auto;
 }
-
 #slideshow-container {
     position: relative;
     width:80%;
@@ -133,7 +119,6 @@ nav ul li a.nav-active{
     margin-left: auto;
     margin-right: auto;
 }
-
 /* Caption text */
 .text {
     color: rgb(132, 76, 88);
@@ -143,7 +128,6 @@ nav ul li a.nav-active{
     width: 100%;
     text-align: center;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -158,25 +142,28 @@ nav ul li a.nav-active{
   padding: 0 15px;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
     right: 20px;
     border-radius: 5% 0 0 5%;
 }
-
 .prev {
     left: 20px;
     border-radius: 5% 0 0 5%;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color:rgb(132, 76, 88);
     color: hsl(347, 58%, 95%)
 }
 
-
+#swipe-msg{
+    display:none;
+    color:rgb(195, 131, 145);
+    margin-top:10px;
+    letter-spacing: 2px;
+    text-align: center;
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -188,29 +175,24 @@ nav ul li a.nav-active{
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .dot-active, .dot:hover {
   background-color: rgb(195, 131, 131);
 }
-
 /* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 375px) {
   .prev, .next{font-size: 30px;}
 
   .text{font-size: 15px;}
 }
-
 
 .view-all{
     display: flex;
@@ -222,15 +204,15 @@ nav ul li a.nav-active{
     padding-bottom: 4px;
     text-align: center;
     border-bottom: 1px solid rgb(132, 76, 88);
-
 }
+
+
 .view-all:hover{
     border-bottom: 1px solid black;
     color: black;
     font-size:22px;
     cursor: pointer;
 }
-
 .feat, .about-me {
     display: flex;
     margin:auto;
@@ -238,7 +220,6 @@ nav ul li a.nav-active{
     width:100%;
     background-color:rgb(195, 131, 145);
 }
-
 .feat p, .about-me p{
     color: #fff;
     font-size:25px;
@@ -248,13 +229,11 @@ nav ul li a.nav-active{
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
 .bio {
     margin:30px auto;
     display:flex;
     max-width: 800px;
 }
-
 .bio p{
     text-align: center;
     padding: 20px 20px;
@@ -264,28 +243,23 @@ nav ul li a.nav-active{
     word-spacing: 2px;
 
 }
-
 .footer{
     background-color: rgb(132, 76, 88);
     padding:30px;
     height: 260px;
 
 }
-
 .footer h3{
     font-size: 30px;
     text-transform: uppercase;
     color:#fff;
     margin-bottom:40px;
 }
-
-
 .footer p{
     font-size:18px;
     margin: 30px auto auto auto;
     color:#fff;
 }
-
 #pin{
     margin-right: 5px;
 }
@@ -294,7 +268,6 @@ nav ul li a.nav-active{
     display:flex;
     list-style: none;
 }
-
 .socials li a{
     margin-right:35px;
 }
@@ -306,12 +279,9 @@ nav ul li a.nav-active{
     font-size: 15px;
     text-align: center;
 }
-
 .copyright i{
     margin-right:4px;
 }
-
-
 @media screen and (max-width: 768px) {
     body{
         overflow-x: hidden;
@@ -320,7 +290,6 @@ nav ul li a.nav-active{
         top: 0;
         height: 11vh;
         padding: 0 12%;
-
     }
     nav.hidden {
         top: -100px;
@@ -352,6 +321,7 @@ nav ul li a.nav-active{
     }
     .nav-active {
         transform: translate(0%);
+        position:fixed;
     }
     .section1 h3 {
         font-size: 20px;
@@ -372,8 +342,10 @@ nav ul li a.nav-active{
     #slideshow-container {
         width: 100%;
     }
+    #swipe-msg{
+        display:block;
+    }
 }
-
 @keyframes navLinkFade {
     from{
         opacity: 0;
@@ -384,7 +356,6 @@ nav ul li a.nav-active{
         transform: translate(0px);
     }
 }
-
 .toggle .one{
     transform: rotate(-45deg) translate(-5px,5px);
     height: 3px;

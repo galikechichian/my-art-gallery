@@ -8,21 +8,17 @@ function atHome() {
 }
 
 
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav-links');
-const navLinks = document.querySelectorAll('.nav-links li');
-
-
 /**[mobile navbar] Animates burger icon and navbar*/
 function navSlide() {
     nav.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
+    navbar.classList.toggle('open');
     navLinks.forEach((link, index)=> {
         if (link.style.animation) {
             link.style.animation = '';
         }
         else    
-        link.style.animation = `navLinkFade 0.2s ease forwards ${index/7+ 0.5}s`;
+        link.style.animation = `navLinkFade 0.2s ease forwards ${index/5+ 0.2}s`;
     });
 }
 
@@ -119,6 +115,9 @@ function goAbout() {
     });
 }
 
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
 
 goHome();
 goAbout();
@@ -130,13 +129,19 @@ var navbar = document.getElementById('navbar');
 var prevScrollPos = window.scrollY;
 window.addEventListener('scroll', ()=> {
     onActive();
-    var currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos) {
-        // Scrolling up, show the navbar
+    if (navbar.classList.contains('open')) {
         navbar.classList.remove('hidden');
-    } else {
-        // Scrolling down, hide the navbar
-        navbar.classList.add('hidden');
+        navbar.style.position='fixed';
     }
-    prevScrollPos = currentScrollPos;
+    else {
+        var currentScrollPos = window.scrollY;
+        if (prevScrollPos > currentScrollPos) {
+            // Scrolling up, show the navbar
+            navbar.classList.remove('hidden');
+        } else {
+            // Scrolling down, hide the navbar
+            navbar.classList.add('hidden');
+        }
+        prevScrollPos = currentScrollPos;
+    }
 });

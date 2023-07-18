@@ -1,0 +1,70 @@
+/*Author: Gali Kechichian 
+*/
+#grid-container {
+    margin: 30px;
+    columns: 3;
+    column-gap: 20px;
+}
+
+.wrapper {
+    margin-bottom:20px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.artwork {
+    margin:auto;
+    display:block;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(48, 22, 22, 0.762);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay:hover {
+    opacity: 1;
+    cursor:pointer;
+}
+
+.text {
+    width: fit-content;
+    color: #fff;
+    border-top:#fff 2px solid;
+    border-bottom:#fff 2px solid;
+    font-family: 'Philosopher', serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 13px;
+}
+.date {  
+    font-family: 'Philosopher', serif;
+    letter-spacing:3px;
+    color:#fff;
+    margin: 15px;
+
+}
+
+@media screen and (max-width:1000px) {
+    #grid-container {
+        columns:2; 
+        column-gap: 15px;    
+        margin:15px;
+    }
+    .wrapper {
+        margin-bottom: 15px;
+    }
+}
+
