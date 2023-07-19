@@ -139,7 +139,7 @@
 @media screen and (max-width:1000px) {
     #grid-container {
         columns:2; 
-        column-gap: 15px;    
+        column-gap: 10px;    
         margin:15px;
     }
     #preview-box{
@@ -163,6 +163,6 @@
         font-size: 30px;
     }
     .wrapper {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 }
