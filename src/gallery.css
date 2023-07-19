@@ -6,19 +6,72 @@
     column-gap: 20px;
 }
 
+#preview-box{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:100;
+    height: 88%;
+    width:960px;
+    background-color: rgba(255, 255, 255, 0.933);
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.225);
+    text-align: center;
+}
+
+#preview-box.gallery{
+    display:none;
+}
+
+#preview-box img{
+    margin-bottom:20px;
+    height:85%;
+    width:auto;
+}
+
+#exit {
+    display:block;
+    text-align: end;
+}
+
+#exit i{
+    margin-bottom:5px;
+    margin-top:20px;
+    margin-right:20px;
+    font-size:30px;
+    color: rgb(132, 76, 88);
+    cursor:pointer;
+}
+#exit i:hover,
+.slide-prev i:hover,
+.slide-next i:hover{
+    color:black;
+}
+.slide-prev, .slide-next{
+    position:absolute;
+    top:51%;
+    padding:20px;
+    font-size: 40px;
+    color: rgb(132, 76, 88);
+    cursor:pointer;  
+}
+.slide-prev{
+    left:0;
+}
+.slide-next{
+    right:0;
+}
 .wrapper {
     margin-bottom:20px;
     align-items: center;
     position: relative;
     width: 100%;
 }
-
 .artwork {
     margin:auto;
     display:block;
-    width: 100%;
+    max-width: 100%;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -33,12 +86,10 @@
     align-items: center;
     justify-content: center;
 }
-
 .overlay:hover {
     opacity: 1;
     cursor:pointer;
 }
-
 .text {
     width: fit-content;
     color: #fff;
@@ -54,17 +105,40 @@
     letter-spacing:3px;
     color:#fff;
     margin: 15px;
-
 }
-
 @media screen and (max-width:1000px) {
     #grid-container {
         columns:2; 
         column-gap: 15px;    
         margin:15px;
     }
+    #preview-box{
+        height:60%;
+        width:98%;
+        z-index:auto;
+    }
+    #exit i{
+        margin-top:10px;
+        margin-right:10px;
+        font-size:20px;
+    }
+    .slide-prev, .slide-next{
+        padding:10px;
+        font-size: 30px;
+    }
+    #preview-box img{
+        position:absolute;  
+        top: 50%;
+        left: 50%;
+        margin-top:15px;
+        transform: translate(-50%, -50%);
+        max-width: 76%;
+        max-height:86%;
+        width:auto;
+        height:auto;
+    
+    }
     .wrapper {
         margin-bottom: 15px;
     }
 }
-
