@@ -98,12 +98,8 @@ nav ul li a.nav-active{
     margin: 40px 0px;
 }
 .mySlides {
-    background: linear-gradient(to right, hsl(347, 58%, 95%),
-    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
-    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
-    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
-    hsl(351, 47%, 97%), hsl(351, 47%, 97%), hsl(351, 47%, 97%),
-    hsl(347, 58%, 95%));
+    background-color: hsl(351, 47%, 97%);
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.09);
     text-align: center;
     padding-bottom:30px;
 }
@@ -122,7 +118,8 @@ nav ul li a.nav-active{
 /* Caption text */
 .text {
     color: rgb(132, 76, 88);
-    font-size: 18px;
+    font-family: 'Philosopher', serif;
+    font-size: 20px;
     padding:20px 0;
     bottom: 8px;
     width: 100%;
@@ -328,6 +325,10 @@ nav ul li a.nav-active{
     }
     .feat, .about-me {
         height: 8vh;
+    }
+    /* Caption text */
+    .text {
+        font-size: 18px; 
     }
     .prev, .next {
         display:none;
