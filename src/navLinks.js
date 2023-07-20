@@ -66,7 +66,7 @@ function activeGalleryContact() {
     const windowPathname = window.location.pathname;
     
     navLinkElements.forEach(navLinkE => {
-        if (navLinkE.href.includes(windowPathname)) {
+        if ((windowPathname !== "/") && navLinkE.href.includes(windowPathname)) {
             navLinkE.classList.add('nav-active');
         }
     });    
