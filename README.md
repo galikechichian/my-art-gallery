@@ -6,4 +6,5 @@
 :link: [Gali Kechichian: Personal Portfolio](https://galikechichian.netlify.app/)
 
 Homepage Preview:
-![](images/preview.png)
+<br><br>
+<img src="images/preview.png" width="500">
