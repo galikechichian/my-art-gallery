@@ -67,7 +67,7 @@ nav ul li a.nav-active{
 .section1 {
     display:flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-bottom: 80px;
     margin-left: auto; margin-right:auto;
     max-width: 60%;
@@ -288,13 +288,12 @@ nav ul li a.nav-active{
         height: 11vh;
         padding: 0 12%;
     }
-    
     .filler{
         height: 11vh;
     }
     .nav-links {
         position:absolute;
-        justify-content: space-around;
+        justify-content: top;
         right:0px;
         height:89vh;
         top: 11vh;
@@ -309,14 +308,16 @@ nav ul li a.nav-active{
         opacity:0;
     }
     .nav-links li a{
-        font-size: 15px;
+        margin: 50px 20px;
     }
     .burger div{
         display:block;
     }
     .nav-active {
         transform: translate(0%);
-        position:fixed;
+    }
+    .section1 h3{
+        font-size: 23px;
     }
     /* Caption text */
     .text {

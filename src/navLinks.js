@@ -4,7 +4,8 @@
 /**Checks if we're on homepage*/
 function atHome() {
     // Looks for an element only present in index.html
-    return document.getElementById('featuring');
+    if (document.getElementById('featuring')) return true;
+    return false;
 }
 
 
@@ -12,7 +13,6 @@ function atHome() {
 function navSlide() {
     nav.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
-    navbar.classList.toggle('open');
     navLinks.forEach((link, index)=> {
         if (link.style.animation) {
             link.style.animation = '';
@@ -29,17 +29,18 @@ function navSlide() {
  */
 function clickBurger() {burger.addEventListener('click', navSlide)}
 
-
+/*
 /**Applies navSlide when navigating to home or about
  * 
  * Uses event listener
- */
+ *
 function navSlideBack() {
     const home = document.getElementById('home-link');
     home.addEventListener('click', navSlide);
     const aboutMe = document.getElementById('about-link');
     aboutMe.addEventListener('click', navSlide);
 }
+*/
 
 
 /**Updates classlist of 'about' nav link
@@ -59,7 +60,6 @@ function onActive() {
 
 
 /**Updates classlist of 'gallery'  and 'contact' nav links
- * as the user scrolls
  */
 function activeGalleryContact() {
     const navLinkElements = document.querySelectorAll('.nav__link');
@@ -80,6 +80,8 @@ function activeGalleryContact() {
 function goHome() {
     const homeLink = document.getElementById('home-link');
     homeLink.addEventListener('click', ()=> {
+        // [mobile] toggle menu and burger
+        if (burger.classList.contains('toggle')) navSlide();
         // if we're already on home, scroll up
         if (atHome()) {
             window.scrollTo({
@@ -88,7 +90,9 @@ function goHome() {
             });
         }
         // else, go to link
-        else window.location.href = 'index.html';
+        else {
+            window.location.href = 'index.html';
+        }
     });
 }
 
@@ -108,8 +112,11 @@ function goAbout() {
     const aboutLink = document.getElementById('about-link');
   
     aboutLink.addEventListener('click', () => {
+        // [mobile] toggle menu and burger
+        if (burger.classList.contains('toggle')) navSlide();
+        
         if (!document.getElementById('featuring')) {
-            location.href = 'index.html#abt-me'; // Navigate to the homepage after scrolling
+            window.location.href = 'index.html#abt-me'; // Navigate to the homepage after scrolling
         }
         else scrollToAbout();
     });
@@ -130,9 +137,9 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
 
-goHome();
-goAbout();
+
 clickBurger();
-navSlideBack();
 activeGalleryContact();
 activeAbout();
+goHome();
+goAbout();
