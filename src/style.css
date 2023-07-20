@@ -24,7 +24,6 @@ nav{
     padding: 0 7%;
     position:fixed;
     width: 100%;
-    transition: top 0.3s ease-in-out;
 }
 .logo {
     height: 80%;
@@ -51,7 +50,7 @@ nav ul li a.nav-active{
 }
 .filler {
     height: 80px;
-    background-color: white;
+    background-color: hsl(347, 58%, 95%);
 }
 .burger div{
     width:25px;
@@ -285,14 +284,10 @@ nav ul li a.nav-active{
         overflow-x: hidden;
     }
     nav {
-        top: 0;
         height: 11vh;
         padding: 0 12%;
     }
-    nav.hidden {
-        top: -100px;
-        transition: 1s;
-    }
+    
     .filler{
         height: 11vh;
     }
@@ -321,9 +316,6 @@ nav ul li a.nav-active{
     .nav-active {
         transform: translate(0%);
         position:fixed;
-    }
-    .section1 h3 {
-        font-size: 20px;
     }
     .feat, .about-me {
         height: 8vh;

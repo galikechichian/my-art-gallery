@@ -125,6 +125,7 @@ clickBurger();
 navSlideBack();
 activeGalleryContact();
 
+/*
 var navbar = document.getElementById('navbar');
 var prevScrollPos = window.scrollY;
 window.addEventListener('scroll', ()=> {
@@ -135,7 +136,7 @@ window.addEventListener('scroll', ()=> {
     }
     else {
         var currentScrollPos = window.scrollY;
-        if (prevScrollPos > currentScrollPos) {
+        if (prevScrollPos > currentScrollPos || window.scrollY < 3) {
             // Scrolling up, show the navbar
             navbar.classList.remove('hidden');
         } else {
@@ -145,3 +146,4 @@ window.addEventListener('scroll', ()=> {
         prevScrollPos = currentScrollPos;
     }
 });
+*/
