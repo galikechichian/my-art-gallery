@@ -102,7 +102,7 @@ function scrollToAbout() {
 
 /**Goes to 'about me' on click
  * 
- * Uses event listener
+ * Uses click event listener
 */
 function goAbout() {
     const aboutLink = document.getElementById('about-link');
@@ -115,6 +115,17 @@ function goAbout() {
     });
 }
 
+/**Changes 'about' navigation link display
+ * when active
+ * 
+ * Uses scroll event listener
+ */
+function activeAbout() {
+    window.addEventListener('scroll', ()=> {
+        onActive();
+    });
+}
+
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
@@ -124,26 +135,4 @@ goAbout();
 clickBurger();
 navSlideBack();
 activeGalleryContact();
-
-/*
-var navbar = document.getElementById('navbar');
-var prevScrollPos = window.scrollY;
-window.addEventListener('scroll', ()=> {
-    onActive();
-    if (navbar.classList.contains('open')) {
-        navbar.classList.remove('hidden');
-        navbar.style.position='fixed';
-    }
-    else {
-        var currentScrollPos = window.scrollY;
-        if (prevScrollPos > currentScrollPos || window.scrollY < 3) {
-            // Scrolling up, show the navbar
-            navbar.classList.remove('hidden');
-        } else {
-            // Scrolling down, hide the navbar
-            navbar.classList.add('hidden');
-        }
-        prevScrollPos = currentScrollPos;
-    }
-});
-*/
+activeAbout();
