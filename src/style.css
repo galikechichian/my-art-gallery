@@ -51,6 +51,7 @@ nav ul li a.nav-active{
 }
 .filler {
     height: 80px;
+    background-color: white;
 }
 .burger div{
     width:25px;
@@ -290,6 +291,7 @@ nav ul li a.nav-active{
     }
     nav.hidden {
         top: -100px;
+        transition: 1s;
     }
     .filler{
         height: 11vh;
@@ -341,7 +343,7 @@ nav ul li a.nav-active{
         background-color: hsl(351, 47%, 97%);
     }
     #slideshow-container {
-        width: 100%;
+        width: 92%;
     }
     #swipe-msg{
         display:block;
