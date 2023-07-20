@@ -3,7 +3,7 @@
  - In this repo you can find the source code for my art portfolio website.  
  - I used pure HTML, CSS and Javascript.
 
-:link: [Gali Kechichian: Personal Portfolio](https://galikechichian.netlify.app/)
+:link: [Website Link](https://galikechichian.netlify.app/)
 
 Homepage Preview:
 <br><br>
