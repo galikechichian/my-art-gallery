@@ -88,7 +88,7 @@ function goHome() {
             });
         }
         // else, go to link
-        else window.location.href = '/src/index.html';
+        else window.location.href = 'index.html';
     });
 }
 
@@ -109,7 +109,7 @@ function goAbout() {
   
     aboutLink.addEventListener('click', () => {
         if (!document.getElementById('featuring')) {
-            location.href = '/src/index.html#abt-me'; // Navigate to the homepage after scrolling
+            location.href = 'index.html#abt-me'; // Navigate to the homepage after scrolling
         }
         else scrollToAbout();
     });
