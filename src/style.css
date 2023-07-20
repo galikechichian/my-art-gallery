@@ -108,10 +108,18 @@ nav ul li a.nav-active{
     height:400px;
     width:auto;
 }
+#swipe-msg{
+    display:none;
+    color:rgb(195, 131, 145);
+    margin-top:70px;
+    margin-bottom:-70px;
+    letter-spacing: 2px;
+    text-align: center;
+}
 #slideshow-container {
     position: relative;
+    margin-top:90px;
     width:80%;
-    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -154,19 +162,12 @@ nav ul li a.nav-active{
     color: hsl(347, 58%, 95%)
 }
 
-#swipe-msg{
-    display:none;
-    color:rgb(195, 131, 145);
-    margin-top:10px;
-    letter-spacing: 2px;
-    text-align: center;
-}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 17px 5px;
+  height: 20px;
+  width: 20px;
+  margin: 20px 15px;
   background-color: white;
   border-radius: 50%;
   display: inline-block;
