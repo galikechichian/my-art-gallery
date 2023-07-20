@@ -68,7 +68,7 @@ function activeGalleryContact() {
     navLinkElements.forEach(navLinkE => {
         if ((windowPathname !== "/") && navLinkE.href.includes(windowPathname)) {
             navLinkE.classList.add('nav-active');
-        }
+        } else navLinkE.classList.remove('nav-active');
     });    
 }
 
@@ -137,9 +137,8 @@ const burger = document.querySelector('.burger');
 const nav = document.querySelector('.nav-links');
 const navLinks = document.querySelectorAll('.nav-links li');
 
-
-clickBurger();
 activeGalleryContact();
+clickBurger();
 activeAbout();
 goHome();
 goAbout();
